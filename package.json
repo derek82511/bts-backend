@@ -1,0 +1,18 @@
+{
+  "name": "bts-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "debug-net": "NODE_DEBUG=http,net,stream nodemon app.js",
+    "debug": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.9.2",
+    "node-fetch": "^3.2.10",
+    "yamljs": "^0.3.0"
+  }
+}

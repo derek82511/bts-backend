@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "0877fcb8-f5e8-405b-9f78-7e58d5c850dc",
+		"name": "BTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1380657"
+	},
+	"item": [
+		{
+			"name": "/api/solutions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/solutions?from=FRANKFURT&to=BERLIN&date=2022-10-28&time=10:00&adult=1&child=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"solutions"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "FRANKFURT"
+						},
+						{
+							"key": "to",
+							"value": "BERLIN"
+						},
+						{
+							"key": "date",
+							"value": "2022-10-28"
+						},
+						{
+							"key": "time",
+							"value": "10:00"
+						},
+						{
+							"key": "duration",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "adult",
+							"value": "1"
+						},
+						{
+							"key": "child",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"passengers\": [\n    {\n      \"last_name\": \"zhang\",\n      \"first_name\": \"san\",\n      \"birthdate\": \"1986-09-01\",\n      \"passport\": \"A123456\",\n      \"email\": \"x@a.cn\",\n      \"phone\": \"+8615000367081\",\n      \"gender\": \"male\"\n    }\n  ],\n  \"sections\": [\n    \"P_TPA5VX\"\n  ],\n  \"seat_reserved\": true,\n  \"memo\": \"partner_order_id\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/order/confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"OD_0MRZVVNGZ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/order/confirm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/order/tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/order/tickets?orderId=OD_0MRZVVNGZ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "OD_0MRZVVNGZ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/order/refund",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"OD_0MRZVVNGZ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/order/refund",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"order",
+						"refund"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

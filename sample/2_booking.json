@@ -1,0 +1,108 @@
+{
+    "id": "OD_4MWW3O3MP",
+    "railway": {
+        "code": "FB"
+    },
+    "offline_fulfillment": false,
+    "from": {
+        "code": "ST_EG2GZ5NE",
+        "name": "米蘭（Lampugnano）",
+        "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+    },
+    "to": {
+        "code": "ST_D194G42L",
+        "name": "羅馬蒂泊蒂娜巴士站",
+        "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+    },
+    "train_description": "FlixBus",
+    "departure": "2022-10-30T12:00:00+01:00",
+    "arrival": "2022-10-30T22:35:00+01:00",
+    "trains": [
+        {
+            "number": "FlixBus",
+            "type": "FB",
+            "from": {
+                "code": "ST_EG2GZ5NE",
+                "name": "米蘭（Lampugnano）",
+                "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+            },
+            "to": {
+                "code": "ST_D194G42L",
+                "name": "羅馬蒂泊蒂娜巴士站",
+                "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+            },
+            "departure": "2022-10-30 12:00:00",
+            "arrival": "2022-10-30 22:35:00"
+        }
+    ],
+    "passengers": [
+        {
+            "id": "PN_7EOP6V4YD",
+            "first_name": "peter",
+            "last_name": "ho",
+            "birthdate": "1994-07-26",
+            "email": "s10127031@gmail.com",
+            "phone": "+886975057216",
+            "gender": "male"
+        }
+    ],
+    "tickets": [
+        {
+            "id": "TK_J7MN9K1MQ",
+            "from": {
+                "code": "ST_EG2GZ5NE",
+                "name": "米蘭（Lampugnano）",
+                "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+            },
+            "to": {
+                "code": "ST_D194G42L",
+                "name": "羅馬蒂泊蒂娜巴士站",
+                "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+            },
+            "price": {
+                "currency": "EUR",
+                "cents": 1299
+            }
+        }
+    ],
+    "online_payment_url": "https://mapi.alipay.com/gateway.do?service=create_direct_pay_by_user&_input_charset=utf-8&partner=2088911887464374&seller_id=2088911887464374&payment_type=1&out_trade_no=OD_4MWW3O3MP&subject=%E7%B1%B3%E5%85%B0%EF%BC%88Lampugnano%EF%BC%89+-+%E7%BD%97%E9%A9%AC%E8%92%82%E6%B3%8A%E8%92%82%E5%A8%9C%E5%B7%B4%E5%A3%AB%E7%AB%99&total_fee=19.19&return_url=http%3A%2F%2Falpha.g2rail.com%2Fpartner%2Fonline_orders%2FOD_4MWW3O3MP%2Falipayment_return&notify_url=https%3A%2F%2Falpha.api.g2rail.com%2Fapi%2Fpayment%2Fonline_orders%2Fonline_payment_notifications%2F&sign_type=MD5&sign=5f55c6b02952d52e60ecb049959590c4",
+    "ticket_price": {
+        "currency": "EUR",
+        "cents": 1299
+    },
+    "payment_price": {
+        "currency": "USD",
+        "cents": 1919
+    },
+    "charging_price": {
+        "currency": "EUR",
+        "cents": 1599
+    },
+    "rebate_amount": {
+        "currency": "EUR",
+        "cents": 0
+    },
+    "records": [
+        {
+            "id": "OL_3G44VPVG8",
+            "amount": {
+                "currency": "EUR",
+                "cents": 300
+            },
+            "type": "credit",
+            "category": "fee",
+            "target": "PN_7EOP6V4YD"
+        },
+        {
+            "id": "OL_4MWWQ33MP",
+            "amount": {
+                "currency": "EUR",
+                "cents": 1299
+            },
+            "type": "credit",
+            "category": "ticket",
+            "target": "TK_J7MN9K1MQ"
+        }
+    ],
+    "memo": "20f7129f-cdb0-4199-885c-f79bc3e4b6f2"
+}

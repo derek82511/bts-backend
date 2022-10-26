@@ -1,0 +1,100 @@
+{
+    "id": "RF_YRGM6YO89",
+    "order": {
+        "id": "OD_0MRZVVNGZ",
+        "railway": {
+            "code": "FB"
+        },
+        "offline_fulfillment": false,
+        "from": {
+            "code": "ST_ZE0NX0EK",
+            "name": "法蘭克福中央火車站",
+            "help_url": "https://help.g2rail.com/zh-tw/stations/frankfurt-central-station"
+        },
+        "to": {
+            "code": "ST_WL38NMEZ",
+            "name": "柏林中央巴士站",
+            "help_url": "https://help.g2rail.com/zh-tw/stations/berlin-central-bus-station"
+        },
+        "train_description": "FlixBus",
+        "departure": "2022-10-28T10:35:00+02:00",
+        "arrival": "2022-10-28T19:20:00+02:00",
+        "trains": [
+            {
+                "number": "FlixBus",
+                "type": "FB",
+                "from": {
+                    "code": "ST_ZE0NX0EK",
+                    "name": "法蘭克福中央火車站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/frankfurt-central-station"
+                },
+                "to": {
+                    "code": "ST_WL38NMEZ",
+                    "name": "柏林中央巴士站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/berlin-central-bus-station"
+                },
+                "departure": "2022-10-28 10:35:00",
+                "arrival": "2022-10-28 19:20:00"
+            }
+        ],
+        "passengers": [
+            {
+                "id": "PN_1EK65GMYL",
+                "first_name": "san",
+                "last_name": "zhang",
+                "birthdate": "1986-09-01",
+                "email": "x@a.cn",
+                "phone": "+8615000367081",
+                "gender": "male"
+            }
+        ],
+        "tickets": [
+            {
+                "id": "TK_LJM2OEQ87",
+                "from": {
+                    "code": "ST_ZE0NX0EK",
+                    "name": "法蘭克福中央火車站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/frankfurt-central-station"
+                },
+                "to": {
+                    "code": "ST_WL38NMEZ",
+                    "name": "柏林中央巴士站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/berlin-central-bus-station"
+                },
+                "price": {
+                    "currency": "EUR",
+                    "cents": 3399
+                }
+            }
+        ],
+        "PNR": "9000000234"
+    },
+    "ticket_price": {
+        "currency": "EUR",
+        "cents": 3399
+    },
+    "payment_price": {
+        "currency": "USD",
+        "cents": -3719
+    },
+    "charging_price": {
+        "currency": "EUR",
+        "cents": 0
+    },
+    "rebate_amount": {
+        "currency": "EUR",
+        "cents": 3099
+    },
+    "records": [
+        {
+            "id": "OL_NM9KRNJM4",
+            "amount": {
+                "currency": "EUR",
+                "cents": 3099
+            },
+            "type": "debit",
+            "category": "refunded_ticket",
+            "target": "TK_LJM2OEQ87"
+        }
+    ]
+}

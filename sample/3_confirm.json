@@ -1,0 +1,111 @@
+{
+    "id": "OC_KPEL3GW74",
+    "order": {
+        "id": "OD_9MJZ6L1YD",
+        "railway": {
+            "code": "FB"
+        },
+        "offline_fulfillment": false,
+        "from": {
+            "code": "ST_EG2GZ5NE",
+            "name": "米蘭（Lampugnano）",
+            "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+        },
+        "to": {
+            "code": "ST_D194G42L",
+            "name": "羅馬蒂泊蒂娜巴士站",
+            "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+        },
+        "train_description": "FlixBus",
+        "departure": "2022-10-30T12:00:00+01:00",
+        "arrival": "2022-10-30T22:35:00+01:00",
+        "trains": [
+            {
+                "number": "FlixBus",
+                "type": "FB",
+                "from": {
+                    "code": "ST_EG2GZ5NE",
+                    "name": "米蘭（Lampugnano）",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+                },
+                "to": {
+                    "code": "ST_D194G42L",
+                    "name": "羅馬蒂泊蒂娜巴士站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+                },
+                "departure": "2022-10-30 12:00:00",
+                "arrival": "2022-10-30 22:35:00"
+            }
+        ],
+        "passengers": [
+            {
+                "id": "PN_P3OGWJ2YG",
+                "first_name": "peter",
+                "last_name": "ho",
+                "birthdate": "1994-07-26",
+                "email": "s10127031@gmail.com",
+                "phone": "+886975057216",
+                "gender": "male"
+            }
+        ],
+        "tickets": [
+            {
+                "id": "TK_D7MZOKXG9",
+                "from": {
+                    "code": "ST_EG2GZ5NE",
+                    "name": "米蘭（Lampugnano）",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/milan-lampugnano-bus-station"
+                },
+                "to": {
+                    "code": "ST_D194G42L",
+                    "name": "羅馬蒂泊蒂娜巴士站",
+                    "help_url": "https://help.g2rail.com/zh-tw/stations/rome-tiburtina-bus-station"
+                },
+                "price": {
+                    "currency": "EUR",
+                    "cents": 1299
+                }
+            }
+        ],
+        "PNR": "9000000161"
+    },
+    "ticket_price": {
+        "currency": "EUR",
+        "cents": 1299
+    },
+    "payment_price": {
+        "currency": "USD",
+        "cents": 1919
+    },
+    "charging_price": {
+        "currency": "EUR",
+        "cents": 1599
+    },
+    "rebate_amount": {
+        "currency": "EUR",
+        "cents": 0
+    },
+    "records": [
+        {
+            "id": "OL_7MZERX1M2",
+            "amount": {
+                "currency": "EUR",
+                "cents": 1299
+            },
+            "type": "credit",
+            "category": "ticket",
+            "target": "TK_D7MZOKXG9"
+        },
+        {
+            "id": "OL_JM2EQ7XYQ",
+            "amount": {
+                "currency": "EUR",
+                "cents": 300
+            },
+            "type": "credit",
+            "category": "fee",
+            "target": "PN_P3OGWJ2YG"
+        }
+    ],
+    "confirm_again": "no_need"
+}

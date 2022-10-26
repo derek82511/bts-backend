@@ -1,0 +1,10 @@
+[
+    {
+        "file": "https://alpha.api.g2rail.com/tickets/zkl6pw6r0z32opjxvqd0k2p95zv7xm9xqpmr4nwl36o81je8ndk971q4e5lv9x2w",
+        "type": "pdf_ticket"
+    },
+    {
+        "file": "https://alpha.api.g2rail.com/tickets/xnlqe82701pveo3wkln0d5jk9woq8gldlzm7r62ez3x4p1vql9r5d46xnjz2j8pv",
+        "type": "mobile_ticket"
+    }
+]

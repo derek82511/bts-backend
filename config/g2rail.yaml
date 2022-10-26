@@ -1,0 +1,5 @@
+host:
+  base-url: '[put your baseUrl]'
+client:
+  api-key: '[put your apiKey]'
+  secret: '[put your secret]'
