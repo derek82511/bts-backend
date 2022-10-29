@@ -1,0 +1,113 @@
+{
+    "id": "evt_3LxugTDqTZTszkxk4XMzny9R",
+    "object": "event",
+    "api_version": "2022-08-01",
+    "created": 1666971686,
+    "data": {
+      "object": {
+        "id": "ch_3LxugTDqTZTszkxk49cjWDZW",
+        "object": "charge",
+        "amount": 1300,
+        "amount_captured": 1300,
+        "amount_refunded": 0,
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": "txn_3LxugTDqTZTszkxk41SB2ZhM",
+        "billing_details": {
+          "address": {
+            "city": null,
+            "country": "TW",
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": "s10127031@gmail.com",
+          "name": "HO MENG HSIU",
+          "phone": null
+        },
+        "calculated_statement_descriptor": "Stripe",
+        "captured": true,
+        "created": 1666971685,
+        "currency": "usd",
+        "customer": null,
+        "description": null,
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {
+        },
+        "invoice": null,
+        "livemode": false,
+        "metadata": {
+        },
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 16,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_3LxugTDqTZTszkxk4fMqYPGT",
+        "payment_method": "pm_1LxugSDqTZTszkxk3rb4y8i6",
+        "payment_method_details": {
+          "card": {
+            "brand": "visa",
+            "checks": {
+              "address_line1_check": null,
+              "address_postal_code_check": null,
+              "cvc_check": "pass"
+            },
+            "country": "US",
+            "exp_month": 12,
+            "exp_year": 2034,
+            "fingerprint": "R2AffN5l5ZliDmhv",
+            "funding": "credit",
+            "installments": null,
+            "last4": "4242",
+            "mandate": null,
+            "network": "visa",
+            "three_d_secure": null,
+            "wallet": null
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xTHhzSjVEcVRaVHN6a3hrKKbw75oGMgZuj3B9CT46LBavwDRlYMSm71TcNTFV_pVvszL5y1v4Bm8g3sJbYgs2cuq5GZrNcX-2aUV6",
+        "refunded": false,
+        "refunds": {
+          "object": "list",
+          "data": [
+          ],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/charges/ch_3LxugTDqTZTszkxk49cjWDZW/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    },
+    "livemode": false,
+    "pending_webhooks": 1,
+    "request": {
+      "id": "req_8ZJgy6jSt0zXZL",
+      "idempotency_key": "8eafcb22-81e7-4042-a11b-5c5d1c513907"
+    },
+    "type": "charge.succeeded"
+  }

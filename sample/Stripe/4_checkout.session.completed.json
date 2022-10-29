@@ -1,0 +1,91 @@
+{
+    "id": "evt_1LxugVDqTZTszkxk79cCBKYW",
+    "object": "event",
+    "api_version": "2022-08-01",
+    "created": 1666971687,
+    "data": {
+      "object": {
+        "id": "cs_test_a13t1Zyil8QZDc1V7JZ57VwvwMZ1Pz06aNrtKLxX7llOrrL6rNbFmUG3h4",
+        "object": "checkout.session",
+        "after_expiration": null,
+        "allow_promotion_codes": false,
+        "amount_subtotal": 1300,
+        "amount_total": 1300,
+        "automatic_tax": {
+          "enabled": false,
+          "status": null
+        },
+        "billing_address_collection": "auto",
+        "cancel_url": "https://stripe.com",
+        "client_reference_id": null,
+        "consent": null,
+        "consent_collection": {
+          "promotions": "none",
+          "terms_of_service": "none"
+        },
+        "created": 1666971666,
+        "currency": "usd",
+        "customer": null,
+        "customer_creation": "if_required",
+        "customer_details": {
+          "address": {
+            "city": null,
+            "country": "TW",
+            "line1": null,
+            "line2": null,
+            "postal_code": null,
+            "state": null
+          },
+          "email": "s10127031@gmail.com",
+          "name": "HO MENG HSIU",
+          "phone": null,
+          "tax_exempt": "none",
+          "tax_ids": [
+          ]
+        },
+        "customer_email": null,
+        "expires_at": 1667058065,
+        "livemode": false,
+        "locale": "auto",
+        "metadata": {
+        },
+        "mode": "payment",
+        "payment_intent": "pi_3LxugTDqTZTszkxk4fMqYPGT",
+        "payment_link": "plink_1LxsSSDqTZTszkxkuxtxt6ZJ",
+        "payment_method_collection": "always",
+        "payment_method_options": {
+        },
+        "payment_method_types": [
+          "card"
+        ],
+        "payment_status": "paid",
+        "phone_number_collection": {
+          "enabled": false
+        },
+        "recovered_from": null,
+        "setup_intent": null,
+        "shipping_address_collection": null,
+        "shipping_cost": null,
+        "shipping_details": null,
+        "shipping_options": [
+        ],
+        "status": "complete",
+        "submit_type": "auto",
+        "subscription": null,
+        "success_url": "https://stripe.com",
+        "total_details": {
+          "amount_discount": 0,
+          "amount_shipping": 0,
+          "amount_tax": 0
+        },
+        "url": null
+      }
+    },
+    "livemode": false,
+    "pending_webhooks": 1,
+    "request": {
+      "id": null,
+      "idempotency_key": null
+    },
+    "type": "checkout.session.completed"
+  }
