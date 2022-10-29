@@ -7,12 +7,12 @@
 	},
 	"item": [
 		{
-			"name": "/api/solutions",
+			"name": "/trail/api/solutions",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3000/api/solutions?from=FRANKFURT&to=BERLIN&date=2022-10-28&time=10:00&adult=1&child=0",
+					"raw": "http://127.0.0.1:3000/trail/api/solutions?from=FRANKFURT&to=BERLIN&date=2022-10-28&time=10:00&adult=1&child=0",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -22,6 +22,7 @@
 					],
 					"port": "3000",
 					"path": [
+						"trail",
 						"api",
 						"solutions"
 					],
@@ -61,7 +62,7 @@
 			"response": []
 		},
 		{
-			"name": "/api/order",
+			"name": "/trail/api/order",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -75,7 +76,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/api/order",
+					"raw": "http://127.0.0.1:3000/trail/api/order",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -85,6 +86,7 @@
 					],
 					"port": "3000",
 					"path": [
+						"trail",
 						"api",
 						"order"
 					]
@@ -93,7 +95,7 @@
 			"response": []
 		},
 		{
-			"name": "/api/order/confirm",
+			"name": "/trail/api/order/confirm",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -107,7 +109,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/api/order/confirm",
+					"raw": "http://127.0.0.1:3000/trail/api/order/confirm",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -117,6 +119,7 @@
 					],
 					"port": "3000",
 					"path": [
+						"trail",
 						"api",
 						"order",
 						"confirm"
@@ -126,12 +129,12 @@
 			"response": []
 		},
 		{
-			"name": "/api/order/tickets",
+			"name": "/trail/api/order/tickets",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3000/api/order/tickets?orderId=OD_0MRZVVNGZ",
+					"raw": "http://127.0.0.1:3000/trail/api/order/tickets?orderId=OD_0MRZVVNGZ",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -141,6 +144,7 @@
 					],
 					"port": "3000",
 					"path": [
+						"trail",
 						"api",
 						"order",
 						"tickets"
@@ -156,7 +160,7 @@
 			"response": []
 		},
 		{
-			"name": "/api/order/refund",
+			"name": "/trail/api/order/refund",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -170,7 +174,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/api/order/refund",
+					"raw": "http://127.0.0.1:3000/trail/api/order/refund",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -180,9 +184,77 @@
 					],
 					"port": "3000",
 					"path": [
+						"trail",
 						"api",
 						"order",
 						"refund"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/newbird/api/order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221029\",\n    \"timePeriodOption\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/newbird/api/order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"newbird",
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/newbird/api/order/commit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"orderId\": \"984afb3f-8b1b-4559-be28-41e39fb16856\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/newbird/api/order/commit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"newbird",
+						"api",
+						"order",
+						"commit"
 					]
 				}
 			},

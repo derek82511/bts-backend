@@ -1,0 +1,7 @@
+smtp:
+  host: '[put your smtp host]'
+  port: '[put your smtp port]'
+  user: '[put your smtp user]'
+  pass: '[put your smtp pass]'
+sender:
+  support: '[put your support email]'
