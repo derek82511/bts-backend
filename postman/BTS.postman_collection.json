@@ -200,7 +200,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221029\",\n    \"timePeriodOption\": 0\n}",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221030\",\n    \"timePeriodOption\": 1\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -233,7 +233,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Derek\",\n    \"orderId\": \"984afb3f-8b1b-4559-be28-41e39fb16856\"\n}",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"orderId\": \"9c6b1afd-b7cb-40e6-bce6-bd79d1190644\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -255,6 +255,69 @@
 						"api",
 						"order",
 						"commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stripe nocode payment (web open)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=9c6b1afd-b7cb-40e6-bce6-bd79d1190644",
+					"protocol": "https",
+					"host": [
+						"buy",
+						"stripe",
+						"com"
+					],
+					"path": [
+						"test_3cs9B056y5sHglq9AA"
+					],
+					"query": [
+						{
+							"key": "prefilled_email",
+							"value": "derek82511%40gmail.com"
+						},
+						{
+							"key": "client_reference_id",
+							"value": "9c6b1afd-b7cb-40e6-bce6-bd79d1190644"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3000/api/stripe/webhook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"evt_1Ly4AuDqTZTszkxkEmoRHc7o\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-08-01\",\n  \"created\": 1667008168,\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_test_a1CUxLexJMmi3rK7MchPFTtmHabIvgbUSEoH443DAIRItBDHhYGCHPeHBJ\",\n      \"object\": \"checkout.session\",\n      \"after_expiration\": null,\n      \"allow_promotion_codes\": false,\n      \"amount_subtotal\": 1300,\n      \"amount_total\": 1300,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_address_collection\": \"auto\",\n      \"cancel_url\": \"https://stripe.com\",\n      \"client_reference_id\": \"9c6b1afd-b7cb-40e6-bce6-bd79d1190644\",\n      \"consent\": null,\n      \"consent_collection\": {\n        \"promotions\": \"none\",\n        \"terms_of_service\": \"none\"\n      },\n      \"created\": 1667008153,\n      \"currency\": \"usd\",\n      \"customer\": null,\n      \"customer_creation\": \"if_required\",\n      \"customer_details\": {\n        \"address\": {\n          \"city\": null,\n          \"country\": \"TW\",\n          \"line1\": null,\n          \"line2\": null,\n          \"postal_code\": null,\n          \"state\": null\n        },\n        \"email\": \"derek82511@gmail.com\",\n        \"name\": \"Derek\",\n        \"phone\": null,\n        \"tax_exempt\": \"none\",\n        \"tax_ids\": [\n        ]\n      },\n      \"customer_email\": null,\n      \"expires_at\": 1667094552,\n      \"livemode\": false,\n      \"locale\": \"auto\",\n      \"metadata\": {\n      },\n      \"mode\": \"payment\",\n      \"payment_intent\": \"pi_3Ly4AsDqTZTszkxk42vvM4RI\",\n      \"payment_link\": \"plink_1LxsSSDqTZTszkxkuxtxt6ZJ\",\n      \"payment_method_collection\": \"always\",\n      \"payment_method_options\": {\n      },\n      \"payment_method_types\": [\n        \"card\"\n      ],\n      \"payment_status\": \"paid\",\n      \"phone_number_collection\": {\n        \"enabled\": false\n      },\n      \"recovered_from\": null,\n      \"setup_intent\": null,\n      \"shipping_address_collection\": null,\n      \"shipping_cost\": null,\n      \"shipping_details\": null,\n      \"shipping_options\": [\n      ],\n      \"status\": \"complete\",\n      \"submit_type\": \"auto\",\n      \"subscription\": null,\n      \"success_url\": \"https://stripe.com\",\n      \"total_details\": {\n        \"amount_discount\": 0,\n        \"amount_shipping\": 0,\n        \"amount_tax\": 0\n      },\n      \"url\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": null,\n    \"idempotency_key\": null\n  },\n  \"type\": \"checkout.session.completed\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/stripe/api/webhook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"stripe",
+						"api",
+						"webhook"
 					]
 				}
 			},
