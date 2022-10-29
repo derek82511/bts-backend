@@ -11,6 +11,12 @@ require('./lib/api/trail-api')(fastify)
 require('./lib/api/newbird-api')(fastify)
 require('./lib/api/stripe-api')(fastify)
 
+fastify.get(`/health`, async (request, reply) => {
+    reply.send({
+        status: 'UP'
+    })
+})
+
 const start = async () => {
     await datastoreClient.connect()
 
