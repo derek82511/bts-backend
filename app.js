@@ -7,6 +7,7 @@ const fastify = require('fastify')({
 })
 
 const g2railAPIClient = require('./lib/client/g2rail-api-client')
+const stripeWebhookHandler = require('./lib/stripe/webhook-handler')
 
 fastify.get('/api/solutions', async (request, reply) => {
     const from = request.query['from']
@@ -56,6 +57,11 @@ fastify.post('/api/order/refund', async (request, reply) => {
     // logger.info(resData)
 
     reply.send(resData)
+})
+
+fastify.post('/api/stripe/webhook', async (request, reply) => {    
+    stripeWebhookHandler.handle(request.body)
+    reply.send({})
 })
 
 const start = async () => {
