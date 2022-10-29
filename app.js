@@ -9,11 +9,7 @@ const fastify = require('fastify')({
 // init api
 require('./lib/api/trail-api')(fastify)
 require('./lib/api/newbird-api')(fastify)
-
-fastify.post('/api/stripe/webhook', async (request, reply) => {
-    stripeWebhookHandler.handle(request.body)
-    reply.send({})
-})
+require('./lib/api/stripe-api')(fastify)
 
 const start = async () => {
     await datastoreClient.connect()
