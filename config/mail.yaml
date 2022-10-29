@@ -5,3 +5,4 @@ smtp:
   pass: '[put your smtp pass]'
 sender:
   support: '[put your support email]'
+  boss: '[put your boss email]'
