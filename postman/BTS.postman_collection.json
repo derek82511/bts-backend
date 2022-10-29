@@ -7,12 +7,37 @@
 	},
 	"item": [
 		{
-			"name": "/trail/api/solutions",
+			"name": "00_/trail/api/order",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/trail/api/solutions?from=ST_EMYR64OX&to=ST_E7G93QNJ&date=2022-11-10&time=05:00&adult=1&child=0",
+					"raw": "{{host}}/trail/api/order?trailOrderId=a9e7afaf-f143-4da0-885b-1b18ee061cca",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"trail",
+						"api",
+						"order"
+					],
+					"query": [
+						{
+							"key": "trailOrderId",
+							"value": "a9e7afaf-f143-4da0-885b-1b18ee061cca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "01_/trail/api/solutions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/trail/api/solutions?from=ST_E020P6M4&to=ST_LYKXO1K1&date=2022-11-01&time=07:00&adult=1&child=0",
 					"host": [
 						"{{host}}"
 					],
@@ -24,19 +49,19 @@
 					"query": [
 						{
 							"key": "from",
-							"value": "ST_EMYR64OX"
+							"value": "ST_E020P6M4"
 						},
 						{
 							"key": "to",
-							"value": "ST_E7G93QNJ"
+							"value": "ST_LYKXO1K1"
 						},
 						{
 							"key": "date",
-							"value": "2022-11-10"
+							"value": "2022-11-01"
 						},
 						{
 							"key": "time",
-							"value": "05:00"
+							"value": "07:00"
 						},
 						{
 							"key": "duration",
@@ -57,13 +82,13 @@
 			"response": []
 		},
 		{
-			"name": "/trail/api/order",
+			"name": "02_/trail/api/order",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"passengers\": [\n    {\n      \"last_name\": \"zhang\",\n      \"first_name\": \"san\",\n      \"birthdate\": \"1986-09-01\",\n      \"passport\": \"A123456\",\n      \"email\": \"x@a.cn\",\n      \"phone\": \"+8615000367081\",\n      \"gender\": \"male\"\n    }\n  ],\n  \"sections\": [\n    \"P_TPA5VX\"\n  ],\n  \"seat_reserved\": true,\n  \"memo\": \"partner_order_id\"\n}",
+					"raw": "{\n  \"passengers\": [\n    {\n      \"last_name\": \"zhang\",\n      \"first_name\": \"san\",\n      \"birthdate\": \"1986-09-01\",\n      \"passport\": \"A123456\",\n      \"email\": \"x@a.cn\",\n      \"phone\": \"+8615000367081\",\n      \"gender\": \"male\"\n    }\n  ],\n  \"sections\": [\n    \"P_1O32FBU\"\n  ],\n  \"seat_reserved\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,13 +110,13 @@
 			"response": []
 		},
 		{
-			"name": "/trail/api/order/confirm",
+			"name": "03_/trail/api/order/confirm",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"orderId\": \"OD_0MRZVVNGZ\"\n}",
+					"raw": "{\n    \"trailOrderId\": \"a9e7afaf-f143-4da0-885b-1b18ee061cca\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -114,12 +139,12 @@
 			"response": []
 		},
 		{
-			"name": "/trail/api/order/tickets",
+			"name": "04_/trail/api/order/tickets",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/trail/api/order/tickets?orderId=OD_0MRZVVNGZ",
+					"raw": "{{host}}/trail/api/order/tickets?trailOrderId=a9e7afaf-f143-4da0-885b-1b18ee061cca",
 					"host": [
 						"{{host}}"
 					],
@@ -131,8 +156,8 @@
 					],
 					"query": [
 						{
-							"key": "orderId",
-							"value": "OD_0MRZVVNGZ"
+							"key": "trailOrderId",
+							"value": "a9e7afaf-f143-4da0-885b-1b18ee061cca"
 						}
 					]
 				}
@@ -140,13 +165,13 @@
 			"response": []
 		},
 		{
-			"name": "/trail/api/order/refund",
+			"name": "05_/trail/api/order/refund",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"orderId\": \"OD_0MRZVVNGZ\"\n}",
+					"raw": "{\n    \"trailOrderId\": \"a9e7afaf-f143-4da0-885b-1b18ee061cca\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -169,7 +194,32 @@
 			"response": []
 		},
 		{
-			"name": "/newbird/api/order",
+			"name": "10_/newbird/api/order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/newbird/api/order?username=Derek",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"newbird",
+						"api",
+						"order"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Derek"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11_/newbird/api/order",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -197,12 +247,12 @@
 			"response": []
 		},
 		{
-			"name": "stripe nocode payment (web open)",
+			"name": "12_stripe nocode payment (web open)",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=874e214d-8937-454c-bbe8-1d906719f5e7",
+					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=5412d4f8-44cc-478a-9fb0-c2d7080e53a7",
 					"protocol": "https",
 					"host": [
 						"buy",
@@ -219,7 +269,7 @@
 						},
 						{
 							"key": "client_reference_id",
-							"value": "874e214d-8937-454c-bbe8-1d906719f5e7"
+							"value": "5412d4f8-44cc-478a-9fb0-c2d7080e53a7"
 						}
 					]
 				}
@@ -227,33 +277,7 @@
 			"response": []
 		},
 		{
-			"name": "/newbird/api/order/commit",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/newbird/api/order/commit?sessionId=dewdewdqwdw",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"newbird",
-						"api",
-						"order",
-						"commit"
-					],
-					"query": [
-						{
-							"key": "sessionId",
-							"value": "dewdewdqwdw"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "/stripe/api/webhook",
+			"name": "13_/stripe/api/webhook",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -264,7 +288,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": \"evt_1Ly578DqTZTszkxkXEUpcHNA\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-08-01\",\n  \"created\": 1667011778,\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER0\",\n      \"object\": \"checkout.session\",\n      \"after_expiration\": null,\n      \"allow_promotion_codes\": false,\n      \"amount_subtotal\": 1300,\n      \"amount_total\": 1300,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_address_collection\": \"auto\",\n      \"cancel_url\": \"https://stripe.com\",\n      \"client_reference_id\": \"0a88dea8-4512-4853-aa01-62a81ea31454\",\n      \"consent\": null,\n      \"consent_collection\": {\n        \"promotions\": \"none\",\n        \"terms_of_service\": \"none\"\n      },\n      \"created\": 1667011762,\n      \"currency\": \"usd\",\n      \"customer\": null,\n      \"customer_creation\": \"if_required\",\n      \"customer_details\": {\n        \"address\": {\n          \"city\": null,\n          \"country\": \"TW\",\n          \"line1\": null,\n          \"line2\": null,\n          \"postal_code\": null,\n          \"state\": null\n        },\n        \"email\": \"derek82511@gmail.com\",\n        \"name\": \"Derek\",\n        \"phone\": null,\n        \"tax_exempt\": \"none\",\n        \"tax_ids\": [\n        ]\n      },\n      \"customer_email\": null,\n      \"expires_at\": 1667098162,\n      \"livemode\": false,\n      \"locale\": \"auto\",\n      \"metadata\": {\n      },\n      \"mode\": \"payment\",\n      \"payment_intent\": \"pi_3Ly576DqTZTszkxk4bPbcuTa\",\n      \"payment_link\": \"plink_1LxsSSDqTZTszkxkuxtxt6ZJ\",\n      \"payment_method_collection\": \"always\",\n      \"payment_method_options\": {\n      },\n      \"payment_method_types\": [\n        \"card\"\n      ],\n      \"payment_status\": \"paid\",\n      \"phone_number_collection\": {\n        \"enabled\": false\n      },\n      \"recovered_from\": null,\n      \"setup_intent\": null,\n      \"shipping_address_collection\": null,\n      \"shipping_cost\": null,\n      \"shipping_details\": null,\n      \"shipping_options\": [\n      ],\n      \"status\": \"complete\",\n      \"submit_type\": \"auto\",\n      \"subscription\": null,\n      \"success_url\": \"https://stripe.com\",\n      \"total_details\": {\n        \"amount_discount\": 0,\n        \"amount_shipping\": 0,\n        \"amount_tax\": 0\n      },\n      \"url\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": null,\n    \"idempotency_key\": null\n  },\n  \"type\": \"checkout.session.completed\"\n}"
+					"raw": "{\n  \"id\": \"evt_1Ly578DqTZTszkxkXEUpcHNA\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-08-01\",\n  \"created\": 1667011778,\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1\",\n      \"object\": \"checkout.session\",\n      \"after_expiration\": null,\n      \"allow_promotion_codes\": false,\n      \"amount_subtotal\": 1300,\n      \"amount_total\": 1300,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_address_collection\": \"auto\",\n      \"cancel_url\": \"https://stripe.com\",\n      \"client_reference_id\": \"5412d4f8-44cc-478a-9fb0-c2d7080e53a7\",\n      \"consent\": null,\n      \"consent_collection\": {\n        \"promotions\": \"none\",\n        \"terms_of_service\": \"none\"\n      },\n      \"created\": 1667011762,\n      \"currency\": \"usd\",\n      \"customer\": null,\n      \"customer_creation\": \"if_required\",\n      \"customer_details\": {\n        \"address\": {\n          \"city\": null,\n          \"country\": \"TW\",\n          \"line1\": null,\n          \"line2\": null,\n          \"postal_code\": null,\n          \"state\": null\n        },\n        \"email\": \"derek82511@gmail.com\",\n        \"name\": \"Derek\",\n        \"phone\": null,\n        \"tax_exempt\": \"none\",\n        \"tax_ids\": [\n        ]\n      },\n      \"customer_email\": null,\n      \"expires_at\": 1667098162,\n      \"livemode\": false,\n      \"locale\": \"auto\",\n      \"metadata\": {\n      },\n      \"mode\": \"payment\",\n      \"payment_intent\": \"pi_3Ly576DqTZTszkxk4bPbcuTa\",\n      \"payment_link\": \"plink_1LxsSSDqTZTszkxkuxtxt6ZJ\",\n      \"payment_method_collection\": \"always\",\n      \"payment_method_options\": {\n      },\n      \"payment_method_types\": [\n        \"card\"\n      ],\n      \"payment_status\": \"paid\",\n      \"phone_number_collection\": {\n        \"enabled\": false\n      },\n      \"recovered_from\": null,\n      \"setup_intent\": null,\n      \"shipping_address_collection\": null,\n      \"shipping_cost\": null,\n      \"shipping_details\": null,\n      \"shipping_options\": [\n      ],\n      \"status\": \"complete\",\n      \"submit_type\": \"auto\",\n      \"subscription\": null,\n      \"success_url\": \"https://stripe.com\",\n      \"total_details\": {\n        \"amount_discount\": 0,\n        \"amount_shipping\": 0,\n        \"amount_tax\": 0\n      },\n      \"url\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": null,\n    \"idempotency_key\": null\n  },\n  \"type\": \"checkout.session.completed\"\n}"
 				},
 				"url": {
 					"raw": "{{host}}/stripe/api/webhook",
@@ -281,7 +305,33 @@
 			"response": []
 		},
 		{
-			"name": "/newbird/api/console/sendOrder",
+			"name": "14_/newbird/api/order/commit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/newbird/api/order/commit?sessionId=cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"newbird",
+						"api",
+						"order",
+						"commit"
+					],
+					"query": [
+						{
+							"key": "sessionId",
+							"value": "cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15_/newbird/api/console/sendOrder",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -310,12 +360,12 @@
 			"response": []
 		},
 		{
-			"name": "/newbird/api/console/getAll",
+			"name": "000_/newbird/api/console/getAll",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/newbird/api/console/getAll?collection=order",
+					"raw": "{{host}}/newbird/api/console/getAll?collection=trail-order",
 					"host": [
 						"{{host}}"
 					],
@@ -328,7 +378,7 @@
 					"query": [
 						{
 							"key": "collection",
-							"value": "order"
+							"value": "trail-order"
 						}
 					]
 				}
