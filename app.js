@@ -3,7 +3,8 @@ const datastoreClient = require('./lib/client/datastore-client')
 const fastify = require('fastify')({
     logger: {
         level: 'info'
-    }
+    },
+    bodyLimit: 104857600
 })
 
 // init api
