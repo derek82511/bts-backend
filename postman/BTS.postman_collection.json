@@ -88,7 +88,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"passengers\": [\n    {\n      \"last_name\": \"zhang\",\n      \"first_name\": \"san\",\n      \"birthdate\": \"1986-09-01\",\n      \"passport\": \"A123456\",\n      \"email\": \"x@a.cn\",\n      \"phone\": \"+8615000367081\",\n      \"gender\": \"male\"\n    }\n  ],\n  \"sections\": [\n    \"P_1O32FBU\"\n  ],\n  \"seat_reserved\": true\n}",
+					"raw": "{\n  \"passengers\": [\n    {\n      \"last_name\": \"Chang\",\n      \"first_name\": \"Derek\",\n      \"birthdate\": \"1993-09-01\",\n      \"passport\": \"A123456789\",\n      \"email\": \"derek@gmail.com\",\n      \"phone\": \"0928750026\",\n      \"gender\": \"male\"\n    }\n  ],\n  \"sections\": [\n    \"P_TE2CI6\"\n  ],\n  \"seat_reserved\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -244,7 +244,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221030\",\n    \"timePeriodOption\": 1\n}",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221030\",\n    \"timePeriodOption\": 1,\n    \"productId\": \"MontSaintMichel\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -271,7 +271,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=8d17527c-c7a7-4ffd-bef8-516e8c410d50",
+					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=6c946a95-fe04-4b7f-8383-14c25fb1766d",
 					"protocol": "https",
 					"host": [
 						"buy",
@@ -288,7 +288,7 @@
 						},
 						{
 							"key": "client_reference_id",
-							"value": "8d17527c-c7a7-4ffd-bef8-516e8c410d50"
+							"value": "6c946a95-fe04-4b7f-8383-14c25fb1766d"
 						}
 					]
 				}
@@ -307,7 +307,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": \"evt_1Ly578DqTZTszkxkXEUpcHNA\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-08-01\",\n  \"created\": 1667011778,\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1\",\n      \"object\": \"checkout.session\",\n      \"after_expiration\": null,\n      \"allow_promotion_codes\": false,\n      \"amount_subtotal\": 1300,\n      \"amount_total\": 1300,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_address_collection\": \"auto\",\n      \"cancel_url\": \"https://stripe.com\",\n      \"client_reference_id\": \"5412d4f8-44cc-478a-9fb0-c2d7080e53a7\",\n      \"consent\": null,\n      \"consent_collection\": {\n        \"promotions\": \"none\",\n        \"terms_of_service\": \"none\"\n      },\n      \"created\": 1667011762,\n      \"currency\": \"usd\",\n      \"customer\": null,\n      \"customer_creation\": \"if_required\",\n      \"customer_details\": {\n        \"address\": {\n          \"city\": null,\n          \"country\": \"TW\",\n          \"line1\": null,\n          \"line2\": null,\n          \"postal_code\": null,\n          \"state\": null\n        },\n        \"email\": \"derek82511@gmail.com\",\n        \"name\": \"Derek\",\n        \"phone\": null,\n        \"tax_exempt\": \"none\",\n        \"tax_ids\": [\n        ]\n      },\n      \"customer_email\": null,\n      \"expires_at\": 1667098162,\n      \"livemode\": false,\n      \"locale\": \"auto\",\n      \"metadata\": {\n      },\n      \"mode\": \"payment\",\n      \"payment_intent\": \"pi_3Ly576DqTZTszkxk4bPbcuTa\",\n      \"payment_link\": \"plink_1LxsSSDqTZTszkxkuxtxt6ZJ\",\n      \"payment_method_collection\": \"always\",\n      \"payment_method_options\": {\n      },\n      \"payment_method_types\": [\n        \"card\"\n      ],\n      \"payment_status\": \"paid\",\n      \"phone_number_collection\": {\n        \"enabled\": false\n      },\n      \"recovered_from\": null,\n      \"setup_intent\": null,\n      \"shipping_address_collection\": null,\n      \"shipping_cost\": null,\n      \"shipping_details\": null,\n      \"shipping_options\": [\n      ],\n      \"status\": \"complete\",\n      \"submit_type\": \"auto\",\n      \"subscription\": null,\n      \"success_url\": \"https://stripe.com\",\n      \"total_details\": {\n        \"amount_discount\": 0,\n        \"amount_shipping\": 0,\n        \"amount_tax\": 0\n      },\n      \"url\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": null,\n    \"idempotency_key\": null\n  },\n  \"type\": \"checkout.session.completed\"\n}"
+					"raw": "{\n  \"id\": \"evt_1Ly578DqTZTszkxkXEUpcHNA\",\n  \"object\": \"event\",\n  \"api_version\": \"2022-08-01\",\n  \"created\": 1667011778,\n  \"data\": {\n    \"object\": {\n      \"id\": \"cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER2\",\n      \"object\": \"checkout.session\",\n      \"after_expiration\": null,\n      \"allow_promotion_codes\": false,\n      \"amount_subtotal\": 1300,\n      \"amount_total\": 1300,\n      \"automatic_tax\": {\n        \"enabled\": false,\n        \"status\": null\n      },\n      \"billing_address_collection\": \"auto\",\n      \"cancel_url\": \"https://stripe.com\",\n      \"client_reference_id\": \"6c946a95-fe04-4b7f-8383-14c25fb1766d\",\n      \"consent\": null,\n      \"consent_collection\": {\n        \"promotions\": \"none\",\n        \"terms_of_service\": \"none\"\n      },\n      \"created\": 1667011762,\n      \"currency\": \"usd\",\n      \"customer\": null,\n      \"customer_creation\": \"if_required\",\n      \"customer_details\": {\n        \"address\": {\n          \"city\": null,\n          \"country\": \"TW\",\n          \"line1\": null,\n          \"line2\": null,\n          \"postal_code\": null,\n          \"state\": null\n        },\n        \"email\": \"derek82511@gmail.com\",\n        \"name\": \"Derek\",\n        \"phone\": null,\n        \"tax_exempt\": \"none\",\n        \"tax_ids\": [\n        ]\n      },\n      \"customer_email\": null,\n      \"expires_at\": 1667098162,\n      \"livemode\": false,\n      \"locale\": \"auto\",\n      \"metadata\": {\n      },\n      \"mode\": \"payment\",\n      \"payment_intent\": \"pi_3Ly576DqTZTszkxk4bPbcuTa\",\n      \"payment_link\": \"plink_1LxsSSDqTZTszkxkuxtxt6ZJ\",\n      \"payment_method_collection\": \"always\",\n      \"payment_method_options\": {\n      },\n      \"payment_method_types\": [\n        \"card\"\n      ],\n      \"payment_status\": \"paid\",\n      \"phone_number_collection\": {\n        \"enabled\": false\n      },\n      \"recovered_from\": null,\n      \"setup_intent\": null,\n      \"shipping_address_collection\": null,\n      \"shipping_cost\": null,\n      \"shipping_details\": null,\n      \"shipping_options\": [\n      ],\n      \"status\": \"complete\",\n      \"submit_type\": \"auto\",\n      \"subscription\": null,\n      \"success_url\": \"https://stripe.com\",\n      \"total_details\": {\n        \"amount_discount\": 0,\n        \"amount_shipping\": 0,\n        \"amount_tax\": 0\n      },\n      \"url\": null\n    }\n  },\n  \"livemode\": false,\n  \"pending_webhooks\": 1,\n  \"request\": {\n    \"id\": null,\n    \"idempotency_key\": null\n  },\n  \"type\": \"checkout.session.completed\"\n}"
 				},
 				"url": {
 					"raw": "{{host}}/stripe/api/webhook",
@@ -329,7 +329,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/newbird/api/order/commit?sessionId=cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1",
+					"raw": "{{host}}/newbird/api/order/commit?sessionId=cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER2",
 					"host": [
 						"{{host}}"
 					],
@@ -342,7 +342,7 @@
 					"query": [
 						{
 							"key": "sessionId",
-							"value": "cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER1"
+							"value": "cs_test_a1fOOBkqwqVfRg7jEo2jpUISVYQLs0qMz3Ns0MFZpniJTESPoClyAi6ER2"
 						}
 					]
 				}
