@@ -37,7 +37,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/trail/api/solutions?from=ST_E020P6M4&to=ST_LYKXO1K1&date=2022-11-01&time=07:00&adult=1&child=0",
+					"raw": "{{host}}/trail/api/solutions?from=ST_D129QQQX&to=ST_LYKXO1K1&date=2022-11-06&time=05:00&adult=1&child=0",
 					"host": [
 						"{{host}}"
 					],
@@ -49,7 +49,7 @@
 					"query": [
 						{
 							"key": "from",
-							"value": "ST_E020P6M4"
+							"value": "ST_D129QQQX"
 						},
 						{
 							"key": "to",
@@ -57,11 +57,11 @@
 						},
 						{
 							"key": "date",
-							"value": "2022-11-01"
+							"value": "2022-11-06"
 						},
 						{
 							"key": "time",
-							"value": "07:00"
+							"value": "05:00"
 						},
 						{
 							"key": "duration",
@@ -219,6 +219,25 @@
 			"response": []
 		},
 		{
+			"name": "product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/newbird/api/product",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"newbird",
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "11_/newbird/api/order",
 			"request": {
 				"method": "POST",
@@ -252,7 +271,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=5412d4f8-44cc-478a-9fb0-c2d7080e53a7",
+					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=8d17527c-c7a7-4ffd-bef8-516e8c410d50",
 					"protocol": "https",
 					"host": [
 						"buy",
@@ -269,7 +288,7 @@
 						},
 						{
 							"key": "client_reference_id",
-							"value": "5412d4f8-44cc-478a-9fb0-c2d7080e53a7"
+							"value": "8d17527c-c7a7-4ffd-bef8-516e8c410d50"
 						}
 					]
 				}
