@@ -37,7 +37,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}/trail/api/solutions?from=PARIS&to=ST_LX2160OK&date=2022-11-06&time=06:00&adult=1&child=0",
+					"raw": "{{host}}/trail/api/solutions?from=ST_LX2160OK&to=PARIS&date=2022-11-06&time=06:00&adult=1&child=0",
 					"host": [
 						"{{host}}"
 					],
@@ -49,11 +49,11 @@
 					"query": [
 						{
 							"key": "from",
-							"value": "PARIS"
+							"value": "ST_LX2160OK"
 						},
 						{
 							"key": "to",
-							"value": "ST_LX2160OK"
+							"value": "PARIS"
 						},
 						{
 							"key": "date",
@@ -238,13 +238,42 @@
 			"response": []
 		},
 		{
+			"name": "station",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/newbird/api/station?country=France&city=Paris",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"newbird",
+						"api",
+						"station"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "France"
+						},
+						{
+							"key": "city",
+							"value": "Paris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "11_/newbird/api/order",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221030\",\n    \"timePeriodOption\": 1,\n    \"quantity\": 1,\n    \"isAddExtra\": true,\n    \"productId\": \"MontSaintMichel\",\n    \"bookingCode\": \"P_1X1GFIQ\"\n}",
+					"raw": "{\n    \"username\": \"Derek\",\n    \"email\": \"derek82511@gmail.com\",\n    \"dateTime\": \"20221030\",\n    \"timePeriodOption\": 1,\n    \"quantity\": 2,\n    \"isAddExtra\": true,\n    \"productId\": \"test_3cs9B056y5sHglq9AA\",\n    \"bookingCode\": \"P_1X1GFIQ\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -271,7 +300,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=551f0228-36ab-4416-98b3-0ac8fe0911bc",
+					"raw": "https://buy.stripe.com/test_3cs9B056y5sHglq9AA?prefilled_email=derek82511%40gmail.com&client_reference_id=b2ffbbba-522f-40b2-bd0d-c8871db9c566",
 					"protocol": "https",
 					"host": [
 						"buy",
@@ -288,7 +317,7 @@
 						},
 						{
 							"key": "client_reference_id",
-							"value": "551f0228-36ab-4416-98b3-0ac8fe0911bc"
+							"value": "b2ffbbba-522f-40b2-bd0d-c8871db9c566"
 						}
 					]
 				}
